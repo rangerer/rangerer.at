@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from collections import Counter
+from collections import defaultdict
 import datetime
 import math
 import sys
@@ -102,9 +102,10 @@ def tag(tag):
 
 @app.route('/tags/')
 def tags():
-    tags = Counter()
+    tags = defaultdict(int)
     for article in blog_articles():
-        tags.update(article.meta.get('tags', []))
+        for tag in article.meta.get('tags', []):
+            tags[tag] += 1
     return render_template('tags.xhtml', tags=tags)
 
 
