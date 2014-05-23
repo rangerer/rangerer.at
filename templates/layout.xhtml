@@ -2,9 +2,8 @@
 <html xmlns='http://www.w3.org/1999/xhtml' lang='en' xml:lang='en'>
     <head>
         <meta charset='utf-8' />
-        <title>obda.net</title>
-        </title>
-        <meta name='author' content='Clemens Kaposi' />
+        <title>rangerer.at</title>
+        <meta name='author' content='Roland Angerer' />
         <link rel='stylesheet' href='{{ url_for('static', filename='css/reset.css') }}' />
         <link rel='stylesheet' href='{{ url_for('static', filename='css/fonts.css') }}' />
         <link rel='stylesheet' href='{{ url_for('pygments_css') }}' />
@@ -14,7 +13,7 @@
     </head>
     <body {%- if body_class %} class='{{ body_class }}' {%- endif %}>
         <header role='banner'>
-            <h1><a href='{{ url_for('index') }}'>obda.net</a></h1>
+            <h1><a href='{{ url_for('index') }}'>rangerer.at</a></h1>
             <nav>
                 <ul>
                     <li><a href='{{ url_for('tags') }}'>Tags</a></li>
@@ -28,30 +27,7 @@
 {% block content %}{% endblock %}
         </main>
         <footer role='contentinfo'>
-            © {{ none|date('%Y') }} Clemens Kaposi
+            © {{ none|date('%Y') }} Roland Angerer
         </footer>
-        <!-- Piwik -->
-        <script>
-        //<![CDATA[
-            if (document.location.hostname != 'localhost') {
-                var _paq = _paq || [];
-                _paq.push(['trackPageView']);
-                _paq.push(['enableLinkTracking']);
-                (function() {
-                    var u = (('https:' == document.location.protocol) ? 'https' : 'http') + '://ssl.obda.net/piwik/';
-                    _paq.push(['setTrackerUrl', u + 'piwik.php']);
-                    _paq.push(['setSiteId', 5]);
-                    var d = document,
-                        g = d.createElement('script'),
-                        s = d.getElementsByTagName('script')[0];
-                    g.defer = true;
-                    g.async = true;
-                    g.src = u + 'piwik.js';
-                    s.parentNode.insertBefore(g, s);
-                })();
-            }
-        //]]>
-        </script>
-        <!-- End Piwik Code -->
     </body>
 </html>
