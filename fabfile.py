@@ -5,18 +5,18 @@ from fabric.api import *
 
 
 env.use_ssh_config = True
-env.hosts = ['monty']
+env.hosts = ['web01.rangerer.at']
 
 
 def deploy():
-    archive = '/tmp/obda.net.tar.gz'
-    pip = '/usr/local/pythonenv/prod-obda-website/bin/pip'
+    archive = '/tmp/rangerer.at.tar.gz'
+    pip = '/usr/local/lib/pythonenv/rangerer-at-www/bin/pip'
     local('git archive -o {} HEAD'.format(archive))
     put(archive, archive)
-    with cd('/srv/obda.net/www'):
-        sudo('tar xzf {}'.format(archive))
+    with cd('/srv/www/rangerer.at/www/'):
+        run('tar xzf {}'.format(archive))
         sudo('{} install -r requirements.txt'.format(pip))
-        sudo('rm requirements.txt')
+        run('rm requirements.txt')
     sudo('apache2ctl graceful')
     run('rm {}'.format(archive))
     local('rm {}'.format(archive))
