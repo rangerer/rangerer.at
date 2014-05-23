@@ -2,7 +2,7 @@ title: 'Tunnel SSH via jumphost'
 published: 2012-03-17
 tags: [ linux, ssh, tunnel ]
 
-Nowadays many companies use a so-called _jumphost_s for access to their
+Nowadays many companies use a so-called _jumphosts_ for access to their
 servers. While this makes it easier for the network admins and (if configured
 properly) more secure, it adds an additional hop for all the users interested
 in using the servers behind the jumphost.
