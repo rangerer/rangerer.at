@@ -1,12 +1,15 @@
-My blog
-=======
+# My blog
 
-These are the whole code and contents of my [blog](https://obda.net/), open
-sourced.  See the blog’s [About](https://obda.net/about/) page for more
+These are the whole code and contents of my [blog](http://rangerer.at/), open
+sourced. See the blog’s [About](http://rangerer.at/about/) page for more
 information.
 
+Code, Templates and CSS are shamelessly copied from
+[yggie49](https://github.com/yggi49)s
+[obda.net](https://github.com/yggi49/obda.net) project and adapted for my
+personal needs.
 
-Caveat
-------
+
+## Caveat
 
 This code will only be maintained for my personal needs.
